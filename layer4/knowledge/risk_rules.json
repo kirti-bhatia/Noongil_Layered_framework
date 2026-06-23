@@ -1,0 +1,254 @@
+{
+"knowledge_base": "NOONGIL-X Risk Assessment Rules",
+"version": "1.0",
+
+
+"risk_levels": {
+    "low": {
+        "min_score": 0,
+        "max_score": 25
+    },
+    "medium": {
+        "min_score": 26,
+        "max_score": 50
+    },
+    "high": {
+        "min_score": 51,
+        "max_score": 75
+    },
+    "critical": {
+        "min_score": 76,
+        "max_score": 100
+    }
+},
+
+"rules": [
+
+    {
+        "rule_id": "RR001",
+        "name": "Fire Detected",
+        "risk_score": 95,
+        "priority": "critical",
+        "condition": "fire_detected == true",
+        "recommended_action": "evacuate_immediately"
+    },
+
+    {
+        "rule_id": "RR002",
+        "name": "Smoke Detected",
+        "risk_score": 85,
+        "priority": "critical",
+        "condition": "smoke_detected == true",
+        "recommended_action": "avoid_area"
+    },
+
+    {
+        "rule_id": "RR003",
+        "name": "Explosion Hazard",
+        "risk_score": 100,
+        "priority": "critical",
+        "condition": "explosion_detected == true",
+        "recommended_action": "emergency_evacuation"
+    },
+
+    {
+        "rule_id": "RR004",
+        "name": "Medical Emergency",
+        "risk_score": 90,
+        "priority": "critical",
+        "condition": "medical_emergency_detected == true",
+        "recommended_action": "call_emergency_services"
+    },
+
+    {
+        "rule_id": "RR005",
+        "name": "Person Calling For Help",
+        "risk_score": 75,
+        "priority": "high",
+        "condition": "help_call_detected == true",
+        "recommended_action": "investigate_immediately"
+    },
+
+    {
+        "rule_id": "RR006",
+        "name": "Lost Child",
+        "risk_score": 80,
+        "priority": "critical",
+        "condition": "lost_child_detected == true",
+        "recommended_action": "notify_security"
+    },
+
+    {
+        "rule_id": "RR007",
+        "name": "Vehicle Very Close",
+        "risk_score": 95,
+        "priority": "critical",
+        "condition": "vehicle_distance < 3",
+        "recommended_action": "stop_user"
+    },
+
+    {
+        "rule_id": "RR008",
+        "name": "Road Crossing",
+        "risk_score": 60,
+        "priority": "high",
+        "condition": "crosswalk_detected == true",
+        "recommended_action": "verify_safe_crossing"
+    },
+
+    {
+        "rule_id": "RR009",
+        "name": "Obstacle Extremely Close",
+        "risk_score": 70,
+        "priority": "high",
+        "condition": "obstacle_distance < 1",
+        "recommended_action": "avoid_collision"
+    },
+
+    {
+        "rule_id": "RR010",
+        "name": "Moving Obstacle",
+        "risk_score": 55,
+        "priority": "high",
+        "condition": "moving_obstacle_detected == true",
+        "recommended_action": "predict_and_avoid"
+    },
+
+    {
+        "rule_id": "RR011",
+        "name": "Wet Floor",
+        "risk_score": 45,
+        "priority": "medium",
+        "condition": "wet_floor_detected == true",
+        "recommended_action": "slow_down"
+    },
+
+    {
+        "rule_id": "RR012",
+        "name": "Stairs Ahead",
+        "risk_score": 50,
+        "priority": "medium",
+        "condition": "stairs_detected == true",
+        "recommended_action": "provide_stair_guidance"
+    },
+
+    {
+        "rule_id": "RR013",
+        "name": "Escalator Ahead",
+        "risk_score": 40,
+        "priority": "medium",
+        "condition": "escalator_detected == true",
+        "recommended_action": "provide_escalator_guidance"
+    },
+
+    {
+        "rule_id": "RR014",
+        "name": "Low Visibility",
+        "risk_score": 65,
+        "priority": "high",
+        "condition": "visibility_score < 0.4",
+        "recommended_action": "increase_monitoring"
+    },
+
+    {
+        "rule_id": "RR015",
+        "name": "Heavy Crowd",
+        "risk_score": 55,
+        "priority": "high",
+        "condition": "crowd_density > 0.8",
+        "recommended_action": "reroute_user"
+    },
+
+    {
+        "rule_id": "RR016",
+        "name": "User Confusion",
+        "risk_score": 35,
+        "priority": "medium",
+        "condition": "user_confusion_detected == true",
+        "recommended_action": "provide_simplified_guidance"
+    },
+
+    {
+        "rule_id": "RR017",
+        "name": "Blocked Route",
+        "risk_score": 45,
+        "priority": "medium",
+        "condition": "route_blocked == true",
+        "recommended_action": "recalculate_route"
+    },
+
+    {
+        "rule_id": "RR018",
+        "name": "Hazardous Object",
+        "risk_score": 85,
+        "priority": "critical",
+        "condition": "hazardous_object_detected == true",
+        "recommended_action": "maintain_safe_distance"
+    },
+
+    {
+        "rule_id": "RR019",
+        "name": "Emergency Alarm",
+        "risk_score": 80,
+        "priority": "critical",
+        "condition": "alarm_detected == true",
+        "recommended_action": "prepare_evacuation"
+    },
+
+    {
+        "rule_id": "RR020",
+        "name": "Off Route",
+        "risk_score": 20,
+        "priority": "low",
+        "condition": "off_route == true",
+        "recommended_action": "route_correction"
+    },
+
+    {
+        "rule_id": "RR021",
+        "name": "Unknown Environment",
+        "risk_score": 30,
+        "priority": "medium",
+        "condition": "environment_unknown == true",
+        "recommended_action": "increase_caution"
+    },
+
+    {
+        "rule_id": "RR022",
+        "name": "Night Time Navigation",
+        "risk_score": 40,
+        "priority": "medium",
+        "condition": "time_of_day == night",
+        "recommended_action": "enhance_awareness"
+    },
+
+    {
+        "rule_id": "RR023",
+        "name": "Multiple Hazards",
+        "risk_score": 90,
+        "priority": "critical",
+        "condition": "hazard_count >= 3",
+        "recommended_action": "emergency_override"
+    },
+
+    {
+        "rule_id": "RR024",
+        "name": "Blind User Near Hazard",
+        "risk_score": 85,
+        "priority": "critical",
+        "condition": "blind_user == true AND hazard_detected == true",
+        "recommended_action": "urgent_guidance"
+    },
+
+    {
+        "rule_id": "RR025",
+        "name": "Safe Environment",
+        "risk_score": 5,
+        "priority": "low",
+        "condition": "hazard_count == 0",
+        "recommended_action": "continue_navigation"
+    }
+]
+
+
+}

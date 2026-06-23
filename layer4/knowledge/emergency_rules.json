@@ -1,0 +1,287 @@
+{
+"knowledge_base": "NOONGIL-X Emergency Rules",
+"version": "1.0",
+
+"rules": [
+
+    {
+        "rule_id": "ER001",
+        "name": "Fire Detection",
+        "priority": "critical",
+        "conditions": [
+            "fire_detected == true"
+        ],
+        "actions": [
+            "trigger_emergency_mode",
+            "locate_nearest_exit",
+            "guide_user_to_exit",
+            "issue_voice_warning"
+        ]
+    },
+
+    {
+        "rule_id": "ER002",
+        "name": "Smoke Detection",
+        "priority": "critical",
+        "conditions": [
+            "smoke_detected == true"
+        ],
+        "actions": [
+            "avoid_smoke_area",
+            "find_safe_route",
+            "guide_to_exit",
+            "increase_alert_level"
+        ]
+    },
+
+    {
+        "rule_id": "ER003",
+        "name": "Explosion Risk",
+        "priority": "critical",
+        "conditions": [
+            "explosion_detected == true"
+        ],
+        "actions": [
+            "move_away_from_source",
+            "seek_safe_zone",
+            "notify_user"
+        ]
+    },
+
+    {
+        "rule_id": "ER004",
+        "name": "Emergency Alarm",
+        "priority": "high",
+        "conditions": [
+            "alarm_detected == true"
+        ],
+        "actions": [
+            "investigate_emergency",
+            "locate_exit",
+            "prepare_evacuation"
+        ]
+    },
+
+    {
+        "rule_id": "ER005",
+        "name": "Blocked Route",
+        "priority": "high",
+        "conditions": [
+            "route_blocked == true"
+        ],
+        "actions": [
+            "calculate_alternate_route",
+            "warn_user",
+            "avoid_blocked_area"
+        ]
+    },
+
+    {
+        "rule_id": "ER006",
+        "name": "Fall Hazard",
+        "priority": "high",
+        "conditions": [
+            "fall_risk > 0.8"
+        ],
+        "actions": [
+            "slow_navigation",
+            "warn_user",
+            "recommend_safe_path"
+        ]
+    },
+
+    {
+        "rule_id": "ER007",
+        "name": "Wet Floor",
+        "priority": "high",
+        "conditions": [
+            "wet_floor_detected == true"
+        ],
+        "actions": [
+            "warn_user",
+            "reduce_walking_speed",
+            "reroute_if_possible"
+        ]
+    },
+
+    {
+        "rule_id": "ER008",
+        "name": "Crowd Congestion",
+        "priority": "medium",
+        "conditions": [
+            "crowd_density > 0.8"
+        ],
+        "actions": [
+            "slow_navigation",
+            "find_less_crowded_route"
+        ]
+    },
+
+    {
+        "rule_id": "ER009",
+        "name": "Lost Child",
+        "priority": "critical",
+        "conditions": [
+            "lost_child_detected == true"
+        ],
+        "actions": [
+            "notify_security",
+            "locate_guardian",
+            "maintain_tracking"
+        ]
+    },
+
+    {
+        "rule_id": "ER010",
+        "name": "Person Calling For Help",
+        "priority": "critical",
+        "conditions": [
+            "help_call_detected == true"
+        ],
+        "actions": [
+            "identify_source",
+            "notify_user",
+            "prioritize_attention"
+        ]
+    },
+
+    {
+        "rule_id": "ER011",
+        "name": "Medical Emergency",
+        "priority": "critical",
+        "conditions": [
+            "medical_emergency_detected == true"
+        ],
+        "actions": [
+            "call_emergency_services",
+            "guide_to_medical_help",
+            "notify_caregiver"
+        ]
+    },
+
+    {
+        "rule_id": "ER012",
+        "name": "User Disoriented",
+        "priority": "high",
+        "conditions": [
+            "user_confusion_detected == true"
+        ],
+        "actions": [
+            "provide_step_by_step_guidance",
+            "simplify_navigation",
+            "repeat_instructions"
+        ]
+    },
+
+    {
+        "rule_id": "ER013",
+        "name": "Obstacle Directly Ahead",
+        "priority": "high",
+        "conditions": [
+            "obstacle_distance < 1.0"
+        ],
+        "actions": [
+            "immediate_warning",
+            "suggest_avoidance_direction"
+        ]
+    },
+
+    {
+        "rule_id": "ER014",
+        "name": "Moving Vehicle Nearby",
+        "priority": "critical",
+        "conditions": [
+            "vehicle_distance < 3.0"
+        ],
+        "actions": [
+            "issue_urgent_warning",
+            "stop_user_movement"
+        ]
+    },
+
+    {
+        "rule_id": "ER015",
+        "name": "Staircase Ahead",
+        "priority": "high",
+        "conditions": [
+            "stairs_detected == true"
+        ],
+        "actions": [
+            "announce_stairs",
+            "provide_step_count",
+            "slow_navigation"
+        ]
+    },
+
+    {
+        "rule_id": "ER016",
+        "name": "Escalator Ahead",
+        "priority": "medium",
+        "conditions": [
+            "escalator_detected == true"
+        ],
+        "actions": [
+            "announce_escalator",
+            "provide_safe_usage_guidance"
+        ]
+    },
+
+    {
+        "rule_id": "ER017",
+        "name": "Low Visibility",
+        "priority": "high",
+        "conditions": [
+            "visibility_score < 0.4"
+        ],
+        "actions": [
+            "increase_sensor_monitoring",
+            "slow_navigation",
+            "issue_caution"
+        ]
+    },
+
+    {
+        "rule_id": "ER018",
+        "name": "Suspicious Hazardous Object",
+        "priority": "critical",
+        "conditions": [
+            "hazardous_object_detected == true"
+        ],
+        "actions": [
+            "maintain_safe_distance",
+            "warn_user",
+            "notify_authorities"
+        ]
+    },
+
+    {
+        "rule_id": "ER019",
+        "name": "User Off Route",
+        "priority": "medium",
+        "conditions": [
+            "off_route == true"
+        ],
+        "actions": [
+            "recalculate_route",
+            "guide_back_to_path"
+        ]
+    },
+
+    {
+        "rule_id": "ER020",
+        "name": "Multiple Critical Hazards",
+        "priority": "maximum",
+        "conditions": [
+            "critical_hazard_count >= 2"
+        ],
+        "actions": [
+            "enter_emergency_override_mode",
+            "prioritize_user_safety",
+            "ignore_nonessential_tasks",
+            "execute_emergency_navigation"
+        ]
+    }
+]
+
+
+}

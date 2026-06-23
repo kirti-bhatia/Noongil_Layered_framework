@@ -1,0 +1,28 @@
+{
+    "timestamp": "2026-06-04T18:00:00",
+
+    "scene": {
+        "type": "home",
+        "confidence": 0.98
+    },
+
+    "objects": [
+        {
+            "label": "television",
+            "confidence": 0.96
+        },
+        {
+            "label": "sofa",
+            "confidence": 0.95
+        }
+    ],
+
+    "speech_transcript": [
+        "Turn off the TV after thirty minutes."
+    ],
+
+    "user_activity": {
+        "state": "resting",
+        "confidence": 0.97
+    }
+}

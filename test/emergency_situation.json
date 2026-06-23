@@ -1,0 +1,31 @@
+{
+    "timestamp": "2026-06-04T21:00:00",
+
+    "scene": {
+        "type": "road",
+        "confidence": 0.95
+    },
+
+    "objects": [
+        {
+            "label": "person",     
+            "confidence": 0.97
+        }
+    ],
+
+    "sounds": [
+        {
+            "label": "help_call",
+            "confidence": 0.99
+        }
+    ],
+
+    "speech_transcript": [
+        "Help! Someone fell down."
+    ],
+
+    "user_activity": {
+        "state": "running",
+        "confidence": 0.96
+    }
+}

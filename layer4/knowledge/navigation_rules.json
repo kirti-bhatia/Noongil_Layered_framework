@@ -1,0 +1,339 @@
+{
+"knowledge_base": "NOONGIL-X Navigation Rules",
+"version": "1.0",
+
+
+"rules": [
+
+    {
+        "rule_id": "NR001",
+        "name": "Navigate To Destination",
+        "priority": "high",
+        "conditions": [
+            "destination_known == true"
+        ],
+        "actions": [
+            "calculate_best_route",
+            "provide_step_by_step_guidance"
+        ]
+    },
+
+    {
+        "rule_id": "NR002",
+        "name": "Unknown Destination",
+        "priority": "medium",
+        "conditions": [
+            "destination_known == false"
+        ],
+        "actions": [
+            "request_destination",
+            "wait_for_user_input"
+        ]
+    },
+
+    {
+        "rule_id": "NR003",
+        "name": "Obstacle Ahead",
+        "priority": "high",
+        "conditions": [
+            "obstacle_distance < 2.0"
+        ],
+        "actions": [
+            "warn_user",
+            "suggest_alternate_path"
+        ]
+    },
+
+    {
+        "rule_id": "NR004",
+        "name": "Immediate Obstacle",
+        "priority": "critical",
+        "conditions": [
+            "obstacle_distance < 0.8"
+        ],
+        "actions": [
+            "stop_navigation",
+            "issue_urgent_warning"
+        ]
+    },
+
+    {
+        "rule_id": "NR005",
+        "name": "Crowded Route",
+        "priority": "medium",
+        "conditions": [
+            "crowd_density > 0.8"
+        ],
+        "actions": [
+            "reduce_speed",
+            "find_alternate_route"
+        ]
+    },
+
+    {
+        "rule_id": "NR006",
+        "name": "Staircase Detected",
+        "priority": "high",
+        "conditions": [
+            "stairs_detected == true"
+        ],
+        "actions": [
+            "announce_stairs",
+            "provide_step_count",
+            "slow_navigation"
+        ]
+    },
+
+    {
+        "rule_id": "NR007",
+        "name": "Elevator Available",
+        "priority": "medium",
+        "conditions": [
+            "elevator_available == true"
+        ],
+        "actions": [
+            "offer_elevator_route"
+        ]
+    },
+
+    {
+        "rule_id": "NR008",
+        "name": "Escalator Detected",
+        "priority": "medium",
+        "conditions": [
+            "escalator_detected == true"
+        ],
+        "actions": [
+            "announce_escalator",
+            "provide_safe_boarding_guidance"
+        ]
+    },
+
+    {
+        "rule_id": "NR009",
+        "name": "Door Ahead",
+        "priority": "medium",
+        "conditions": [
+            "door_detected == true"
+        ],
+        "actions": [
+            "announce_door",
+            "guide_user_to_door"
+        ]
+    },
+
+    {
+        "rule_id": "NR010",
+        "name": "Intersection Ahead",
+        "priority": "high",
+        "conditions": [
+            "intersection_detected == true"
+        ],
+        "actions": [
+            "announce_intersection",
+            "provide_direction_choice"
+        ]
+    },
+
+    {
+        "rule_id": "NR011",
+        "name": "Crosswalk Detected",
+        "priority": "critical",
+        "conditions": [
+            "crosswalk_detected == true"
+        ],
+        "actions": [
+            "announce_crosswalk",
+            "check_traffic",
+            "guide_safe_crossing"
+        ]
+    },
+
+    {
+        "rule_id": "NR012",
+        "name": "Vehicle Nearby",
+        "priority": "critical",
+        "conditions": [
+            "vehicle_distance < 5.0"
+        ],
+        "actions": [
+            "warn_user",
+            "pause_crossing"
+        ]
+    },
+
+    {
+        "rule_id": "NR013",
+        "name": "Route Blocked",
+        "priority": "high",
+        "conditions": [
+            "route_blocked == true"
+        ],
+        "actions": [
+            "recalculate_route",
+            "avoid_blocked_path"
+        ]
+    },
+
+    {
+        "rule_id": "NR014",
+        "name": "Emergency Exit Navigation",
+        "priority": "maximum",
+        "conditions": [
+            "emergency_mode == true"
+        ],
+        "actions": [
+            "locate_nearest_exit",
+            "guide_to_exit",
+            "ignore_nonessential_stops"
+        ]
+    },
+
+    {
+        "rule_id": "NR015",
+        "name": "Low Visibility",
+        "priority": "high",
+        "conditions": [
+            "visibility_score < 0.4"
+        ],
+        "actions": [
+            "increase_guidance_frequency",
+            "slow_navigation"
+        ]
+    },
+
+    {
+        "rule_id": "NR016",
+        "name": "User Off Route",
+        "priority": "medium",
+        "conditions": [
+            "off_route == true"
+        ],
+        "actions": [
+            "notify_user",
+            "recalculate_route"
+        ]
+    },
+
+    {
+        "rule_id": "NR017",
+        "name": "Destination Reached",
+        "priority": "high",
+        "conditions": [
+            "distance_to_destination < 1.0"
+        ],
+        "actions": [
+            "announce_arrival",
+            "stop_navigation"
+        ]
+    },
+
+    {
+        "rule_id": "NR018",
+        "name": "Landmark Detected",
+        "priority": "medium",
+        "conditions": [
+            "landmark_detected == true"
+        ],
+        "actions": [
+            "announce_landmark",
+            "use_landmark_for_orientation"
+        ]
+    },
+
+    {
+        "rule_id": "NR019",
+        "name": "User Confused",
+        "priority": "high",
+        "conditions": [
+            "user_confusion_detected == true"
+        ],
+        "actions": [
+            "simplify_instructions",
+            "repeat_guidance",
+            "provide_turn_by_turn_navigation"
+        ]
+    },
+
+    {
+        "rule_id": "NR020",
+        "name": "Navigation Assistance Priority",
+        "priority": "maximum",
+        "conditions": [
+            "blind_user == true"
+        ],
+        "actions": [
+            "increase_audio_feedback",
+            "increase_haptic_feedback",
+            "provide_precise_obstacle_information"
+        ]
+    },
+
+    {
+        "rule_id": "NR021",
+        "name": "Moving Obstacle",
+        "priority": "high",
+        "conditions": [
+            "moving_obstacle_detected == true"
+        ],
+        "actions": [
+            "predict_obstacle_path",
+            "adjust_navigation_route"
+        ]
+    },
+
+    {
+        "rule_id": "NR022",
+        "name": "Safe Route Selection",
+        "priority": "maximum",
+        "conditions": [
+            "multiple_routes_available == true"
+        ],
+        "actions": [
+            "evaluate_risk_score",
+            "select_safest_route"
+        ]
+    },
+
+    {
+        "rule_id": "NR023",
+        "name": "Long Distance Navigation",
+        "priority": "medium",
+        "conditions": [
+            "distance_to_destination > 100"
+        ],
+        "actions": [
+            "provide_progress_updates",
+            "announce_remaining_distance"
+        ]
+    },
+
+    {
+        "rule_id": "NR024",
+        "name": "Indoor Navigation",
+        "priority": "high",
+        "conditions": [
+            "environment_type == indoor"
+        ],
+        "actions": [
+            "use_landmarks",
+            "use_corridor_navigation"
+        ]
+    },
+
+    {
+        "rule_id": "NR025",
+        "name": "Outdoor Navigation",
+        "priority": "high",
+        "conditions": [
+            "environment_type == outdoor"
+        ],
+        "actions": [
+            "use_gps_navigation",
+            "monitor_traffic_hazards"
+        ]
+    }
+]
+
+
+}

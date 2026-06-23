@@ -1,0 +1,192 @@
+{
+"knowledge_base": "NOONGIL-X Common Sense Knowledge",
+"version": "1.0",
+
+"categories": {
+
+"human_behavior": [
+  "People generally move toward intended destinations.",
+  "People avoid obstacles while walking.",
+  "People typically seek help when confused or lost.",
+  "People often follow signs for navigation.",
+  "People tend to stop when encountering danger.",
+  "People slow down in crowded environments.",
+  "People respond to emergency alarms.",
+  "People may become stressed during emergencies.",
+  "People often look toward sounds of interest.",
+  "People usually avoid collisions."
+],
+
+"navigation": [
+  "Doors connect spaces.",
+  "Corridors connect rooms and destinations.",
+  "Stairs connect different floors.",
+  "Elevators provide vertical transportation.",
+  "Emergency exits lead to safer areas.",
+  "Directional signs assist navigation.",
+  "Maps provide route information.",
+  "Blocked paths require alternate routes.",
+  "Landmarks help orientation.",
+  "People generally prefer shorter routes."
+],
+
+"mobility": [
+  "Walking requires a clear path.",
+  "Moving obstacles increase navigation complexity.",
+  "Uneven surfaces increase fall risk.",
+  "Slippery surfaces reduce stability.",
+  "Fast movement increases collision risk.",
+  "Narrow pathways limit movement.",
+  "Crowded environments reduce mobility.",
+  "Open spaces allow easier movement.",
+  "Obstacles may block intended routes.",
+  "Mobility assistance may be required in hazardous areas."
+],
+
+"social_interaction": [
+  "People asking questions often seek information.",
+  "A greeting usually initiates interaction.",
+  "People calling for help may require assistance.",
+  "Children often stay near guardians.",
+  "Lost individuals may display confusion.",
+  "Groups often move together.",
+  "People may communicate verbally or nonverbally.",
+  "Distress can be indicated through voice tone.",
+  "Eye contact often indicates attention.",
+  "Emergency situations increase social coordination."
+],
+
+"child_safety": [
+  "Children require supervision in public spaces.",
+  "A crying child may indicate distress.",
+  "Separated children may be lost.",
+  "Lost child situations require urgent attention.",
+  "Children may move unpredictably.",
+  "Children can become distracted easily.",
+  "Children may not recognize hazards.",
+  "Crowded environments increase child safety risks."
+],
+
+"elderly_safety": [
+  "Elderly individuals may walk slower.",
+  "Elderly individuals may require navigation assistance.",
+  "Falls pose greater risk to elderly individuals.",
+  "Poor lighting affects elderly mobility.",
+  "Crowded environments may create difficulty.",
+  "Stairs may be challenging for elderly users."
+],
+
+"visual_impairment": [
+  "Blind users rely on non-visual guidance.",
+  "Audio feedback assists blind navigation.",
+  "Obstacle awareness improves safety.",
+  "Landmarks assist orientation.",
+  "Precise instructions improve navigation accuracy.",
+  "Unexpected obstacles increase navigation difficulty."
+],
+
+"environment": [
+  "Low lighting reduces visibility.",
+  "Rain can create slippery surfaces.",
+  "Fog reduces visibility.",
+  "High noise levels reduce communication effectiveness.",
+  "Smoke may indicate danger.",
+  "Heat may cause discomfort.",
+  "Cold weather may affect mobility.",
+  "Strong winds can affect movement.",
+  "Environmental conditions influence safety."
+],
+
+"object_usage": [
+  "Chairs are intended for sitting.",
+  "Tables support objects.",
+  "Doors enable entry and exit.",
+  "Escalators move people between floors.",
+  "Elevators transport people vertically.",
+  "Signs provide information.",
+  "Railings improve safety on stairs.",
+  "Benches provide resting places.",
+  "Vehicles provide transportation.",
+  "Maps assist navigation."
+],
+
+"shopping_mall": [
+  "Shops sell products and services.",
+  "Escalators connect floors.",
+  "Crowds are common during busy hours.",
+  "Children may become separated from guardians.",
+  "Information desks provide assistance.",
+  "Emergency exits are marked.",
+  "Food courts attract large groups.",
+  "Announcements provide important information."
+],
+
+"transportation": [
+  "Bus stops are waiting locations.",
+  "Train stations contain platforms.",
+  "Crosswalks provide safer road crossing.",
+  "Traffic signals regulate movement.",
+  "Vehicles may pose collision risks.",
+  "Roads connect locations.",
+  "Passengers wait before boarding.",
+  "Public transport follows schedules."
+],
+
+"emergency": [
+  "Fire requires immediate response.",
+  "Smoke may indicate a fire.",
+  "Emergency alarms indicate potential danger.",
+  "People should move toward exits during emergencies.",
+  "Hazardous areas should be avoided.",
+  "Medical emergencies require urgent attention.",
+  "Emergency services provide assistance.",
+  "Evacuation routes improve safety.",
+  "Distress signals should be prioritized.",
+  "Dangerous situations require rapid decision making."
+],
+
+"health": [
+  "People may become fatigued after prolonged activity.",
+  "Dehydration may affect performance.",
+  "Pain may indicate injury.",
+  "Dizziness may increase fall risk.",
+  "Medical assistance may be required during emergencies.",
+  "Rest improves recovery.",
+  "Stress affects decision making.",
+  "Fatigue reduces attention."
+],
+
+"risk_assessment": [
+  "Multiple hazards increase overall risk.",
+  "Crowded areas increase collision probability.",
+  "Poor visibility increases accident probability.",
+  "Moving obstacles increase navigation difficulty.",
+  "Fire and smoke indicate high risk.",
+  "Unknown situations require caution.",
+  "Hazards near users require prioritization.",
+  "Risk should be continuously monitored."
+],
+
+"intent_inference": [
+  "A request for directions implies navigation intent.",
+  "A request for help implies assistance intent.",
+  "Looking for an exit implies evacuation or departure intent.",
+  "Searching behavior may indicate a lost object or person.",
+  "Approaching a shop may indicate shopping intent.",
+  "Waiting near transportation points may indicate travel intent.",
+  "Repeated scanning may indicate uncertainty."
+],
+
+"prediction": [
+  "People generally continue their current movement direction.",
+  "Crowds tend to follow major pathways.",
+  "Moving obstacles will likely continue motion briefly.",
+  "Lost individuals may seek assistance.",
+  "Users tend to avoid hazards when informed.",
+  "Blocked routes lead to rerouting behavior.",
+  "Emergency situations increase movement toward exits."
+]
+
+
+}
+}

@@ -1,0 +1,28 @@
+{
+    "timestamp": "2026-06-04T19:00:00",
+
+    "scene": {
+        "type": "street",
+        "confidence": 0.92
+    },
+
+    "objects": [
+        {
+            "label": "traffic_signal",
+            "confidence": 0.93
+        },
+        {
+            "label": "vehicle",
+            "confidence": 0.95
+        }
+    ],
+
+    "speech_transcript": [
+        "Take me to the nearest hospital."
+    ],
+
+    "user_activity": {
+        "state": "walking",
+        "confidence": 0.94
+    }
+}

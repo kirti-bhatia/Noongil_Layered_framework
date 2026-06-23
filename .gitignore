@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# Output Files
+output/
+layer2/output/
+layer3/output/
+layer4/output/
+
+# Logs
+*.log
+
+*.xlsx
