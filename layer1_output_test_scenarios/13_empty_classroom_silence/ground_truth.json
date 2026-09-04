@@ -1,0 +1,17 @@
+{
+  "test_id": "13_empty_classroom_silence",
+  "scene": "classroom",
+  "objects": [
+    "chair",
+    "chair",
+    "chair",
+    "dining table",
+    "tv"
+  ],
+  "speech": "",
+  "sounds": [],
+  "recognized_text": "",
+  "difficulty": "hard",
+  "purpose": "No-person image and true silent-audio negative control",
+  "annotation_type": "class_labels_only"
+}

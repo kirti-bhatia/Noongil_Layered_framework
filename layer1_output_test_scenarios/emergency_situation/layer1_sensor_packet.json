@@ -1,0 +1,122 @@
+{
+  "packet_metadata": {
+    "packet_id": "MSP_TEST_004",
+    "packet_type": "noongil_layer1_sensor_packet",
+    "schema_version": "1.0",
+    "created_at": "2026-06-04T21:00:00Z",
+    "source_frame_id": "SYNC_TEST_004",
+    "build_status": "complete",
+    "source_mode": "test_files",
+    "simulated": true,
+    "scenario": "emergency_situation"
+  },
+  "modalities": {
+    "vision": {
+      "status": "observed",
+      "timestamp": "2026-06-04T21:00:00Z",
+      "frame_id": "FRAME_TEST_004",
+      "frame_path": "emergency_situation/frame.jpg",
+      "format": "jpeg"
+    },
+    "audio": {
+      "status": "observed",
+      "timestamp": "2026-06-04T21:00:00Z",
+      "audio_path": "emergency_situation/audio.wav",
+      "format": "wav",
+      "sample_rate_hz": 16000,
+      "channels": 1
+    },
+    "spatial": {
+      "status": "observed",
+      "latitude": 31.6328,
+      "longitude": 74.8742,
+      "altitude_m": 230.0,
+      "horizontal_accuracy_m": 4.0,
+      "heading_degrees": 92.0,
+      "speed_mps": 2.8
+    },
+    "motion": {
+      "status": "observed",
+      "accelerometer_mps2": {
+        "x": 1.25,
+        "y": 0.84,
+        "z": 10.42
+      },
+      "gyroscope_rps": {
+        "x": 0.91,
+        "y": 0.455,
+        "z": 0.30333333333333334
+      },
+      "magnetometer_ut": {
+        "x": 21.3,
+        "y": -4.8,
+        "z": 38.1
+      }
+    },
+    "interaction": {
+      "status": "observed",
+      "type": "voice_activation",
+      "active": true
+    },
+    "device": {
+      "status": "observed",
+      "type": "android_phone",
+      "battery_percent": 78,
+      "network": "wifi"
+    },
+    "wearable": {
+      "status": "observed",
+      "type": "wireless_earphones",
+      "connected": true,
+      "battery_percent": 71
+    }
+  },
+  "synchronization": {
+    "frame_id": "SYNC_TEST_004",
+    "anchor_timestamp": "2026-06-04T21:00:00Z",
+    "status": "synchronized",
+    "aligned_modalities": [
+      "vision",
+      "audio",
+      "spatial",
+      "motion",
+      "interaction",
+      "device",
+      "wearable"
+    ],
+    "missing_modalities": [],
+    "stale_modalities": []
+  },
+  "sensor_confidence": {
+    "vision": {
+      "final_confidence": 0.94
+    },
+    "audio": {
+      "final_confidence": 0.96
+    },
+    "spatial": {
+      "final_confidence": 0.91
+    },
+    "motion": {
+      "final_confidence": 0.93
+    },
+    "overall_confidence": 0.935
+  },
+  "missing_modality_recovery": {
+    "recovery_used": false,
+    "recovered_modalities": [],
+    "unavailable_modalities": []
+  },
+  "routing": {
+    "source_layer": "layer1",
+    "destination_layer": "layer2",
+    "packet_priority": "high",
+    "ready_for_layer2": true
+  },
+  "provenance": {
+    "source_device": "android_phone",
+    "camera_source": "test_frame",
+    "acquisition_mode": "simulation",
+    "processing_version": "1.0"
+  }
+}

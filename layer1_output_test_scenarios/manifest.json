@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "scenario_count": 28,
+  "scenarios": [
+    {
+      "name": "01_office_meeting",
+      "input_packet": "01_office_meeting/layer1_sensor_packet.json",
+      "frame": "01_office_meeting/image.png",
+      "audio": "01_office_meeting/audio.wav",
+      "transcript": "01_office_meeting/transcript.txt",
+      "ground_truth": "01_office_meeting/ground_truth.json"
+    },
+    {
+      "name": "02_modern_living_room",
+      "input_packet": "02_modern_living_room/layer1_sensor_packet.json",
+      "frame": "02_modern_living_room/image.png",
+      "audio": "02_modern_living_room/audio.wav",
+      "transcript": "02_modern_living_room/transcript.txt",
+      "ground_truth": "02_modern_living_room/ground_truth.json"
+    },
+    {
+      "name": "03_hospital_corridor",
+      "input_packet": "03_hospital_corridor/layer1_sensor_packet.json",
+      "frame": "03_hospital_corridor/image.png",
+      "audio": "03_hospital_corridor/audio.wav",
+      "transcript": "03_hospital_corridor/transcript.txt",
+      "ground_truth": "03_hospital_corridor/ground_truth.json"
+    },
+    {
+      "name": "04_busy_cafe",
+      "input_packet": "04_busy_cafe/layer1_sensor_packet.json",
+      "frame": "04_busy_cafe/image.png",
+      "audio": "04_busy_cafe/audio.wav",
+      "transcript": "04_busy_cafe/transcript.txt",
+      "ground_truth": "04_busy_cafe/ground_truth.json"
+    },
+    {
+      "name": "05_lecture_classroom",
+      "input_packet": "05_lecture_classroom/layer1_sensor_packet.json",
+      "frame": "05_lecture_classroom/image.png",
+      "audio": "05_lecture_classroom/audio.wav",
+      "transcript": "05_lecture_classroom/transcript.txt",
+      "ground_truth": "05_lecture_classroom/ground_truth.json"
+    },
+    {
+      "name": "06_mall_escalator",
+      "input_packet": "06_mall_escalator/layer1_sensor_packet.json",
+      "frame": "06_mall_escalator/image.png",
+      "audio": "06_mall_escalator/audio.wav",
+      "transcript": "06_mall_escalator/transcript.txt",
+      "ground_truth": "06_mall_escalator/ground_truth.json"
+    },
+    {
+      "name": "07_park_dog_walk",
+      "input_packet": "07_park_dog_walk/layer1_sensor_packet.json",
+      "frame": "07_park_dog_walk/image.png",
+      "audio": "07_park_dog_walk/audio.wav",
+      "transcript": "07_park_dog_walk/transcript.txt",
+      "ground_truth": "07_park_dog_walk/ground_truth.json"
+    },
+    {
+      "name": "08_urban_traffic_junction",
+      "input_packet": "08_urban_traffic_junction/layer1_sensor_packet.json",
+      "frame": "08_urban_traffic_junction/image.png",
+      "audio": "08_urban_traffic_junction/audio.wav",
+      "transcript": "08_urban_traffic_junction/transcript.txt",
+      "ground_truth": "08_urban_traffic_junction/ground_truth.json"
+    },
+    {
+      "name": "09_highway_emergency",
+      "input_packet": "09_highway_emergency/layer1_sensor_packet.json",
+      "frame": "09_highway_emergency/image.png",
+      "audio": "09_highway_emergency/audio.wav",
+      "transcript": "09_highway_emergency/transcript.txt",
+      "ground_truth": "09_highway_emergency/ground_truth.json"
+    },
+    {
+      "name": "10_home_kitchen",
+      "input_packet": "10_home_kitchen/layer1_sensor_packet.json",
+      "frame": "10_home_kitchen/image.png",
+      "audio": "10_home_kitchen/audio.wav",
+      "transcript": "10_home_kitchen/transcript.txt",
+      "ground_truth": "10_home_kitchen/ground_truth.json"
+    },
+    {
+      "name": "11_empty_office",
+      "input_packet": "11_empty_office/layer1_sensor_packet.json",
+      "frame": "11_empty_office/image.png",
+      "audio": "11_empty_office/audio.wav",
+      "transcript": "11_empty_office/transcript.txt",
+      "ground_truth": "11_empty_office/ground_truth.json"
+    },
+    {
+      "name": "12_hospital_waiting_room",
+      "input_packet": "12_hospital_waiting_room/layer1_sensor_packet.json",
+      "frame": "12_hospital_waiting_room/image.png",
+      "audio": "12_hospital_waiting_room/audio.wav",
+      "transcript": "12_hospital_waiting_room/transcript.txt",
+      "ground_truth": "12_hospital_waiting_room/ground_truth.json"
+    },
+    {
+      "name": "13_empty_classroom_silence",
+      "input_packet": "13_empty_classroom_silence/layer1_sensor_packet.json",
+      "frame": "13_empty_classroom_silence/image.png",
+      "audio": "13_empty_classroom_silence/audio.wav",
+      "transcript": "13_empty_classroom_silence/transcript.txt",
+      "ground_truth": "13_empty_classroom_silence/ground_truth.json"
+    },
+    {
+      "name": "14_night_road",
+      "input_packet": "14_night_road/layer1_sensor_packet.json",
+      "frame": "14_night_road/image.png",
+      "audio": "14_night_road/audio.wav",
+      "transcript": "14_night_road/transcript.txt",
+      "ground_truth": "14_night_road/ground_truth.json"
+    },
+    {
+      "name": "15_pedestrian_crossing",
+      "input_packet": "15_pedestrian_crossing/layer1_sensor_packet.json",
+      "frame": "15_pedestrian_crossing/image.png",
+      "audio": "15_pedestrian_crossing/audio.wav",
+      "transcript": "15_pedestrian_crossing/transcript.txt",
+      "ground_truth": "15_pedestrian_crossing/ground_truth.json"
+    },
+    {
+      "name": "16_cafe_conversation",
+      "input_packet": "16_cafe_conversation/layer1_sensor_packet.json",
+      "frame": "16_cafe_conversation/image.png",
+      "audio": "16_cafe_conversation/audio.wav",
+      "transcript": "16_cafe_conversation/transcript.txt",
+      "ground_truth": "16_cafe_conversation/ground_truth.json"
+    },
+    {
+      "name": "17_park_ball_play",
+      "input_packet": "17_park_ball_play/layer1_sensor_packet.json",
+      "frame": "17_park_ball_play/image.png",
+      "audio": "17_park_ball_play/audio.wav",
+      "transcript": "17_park_ball_play/transcript.txt",
+      "ground_truth": "17_park_ball_play/ground_truth.json"
+    },
+    {
+      "name": "18_mall_information_desk",
+      "input_packet": "18_mall_information_desk/layer1_sensor_packet.json",
+      "frame": "18_mall_information_desk/image.png",
+      "audio": "18_mall_information_desk/audio.wav",
+      "transcript": "18_mall_information_desk/transcript.txt",
+      "ground_truth": "18_mall_information_desk/ground_truth.json"
+    },
+    {
+      "name": "19_home_bedroom",
+      "input_packet": "19_home_bedroom/layer1_sensor_packet.json",
+      "frame": "19_home_bedroom/image.png",
+      "audio": "19_home_bedroom/audio.wav",
+      "transcript": "19_home_bedroom/transcript.txt",
+      "ground_truth": "19_home_bedroom/ground_truth.json"
+    },
+    {
+      "name": "20_private_office",
+      "input_packet": "20_private_office/layer1_sensor_packet.json",
+      "frame": "20_private_office/image.png",
+      "audio": "20_private_office/audio.wav",
+      "transcript": "20_private_office/transcript.txt",
+      "ground_truth": "20_private_office/ground_truth.json"
+    },
+    {
+      "name": "classroom",
+      "input_packet": "classroom/layer1_sensor_packet.json",
+      "frame": "classroom/frame.jpg",
+      "audio": "classroom/audio.wav",
+      "sensor_data": "classroom/sensor_data.json",
+      "expected_output": "classroom/expected_layer2_output.json"
+    },
+    {
+      "name": "complex_real_world",
+      "input_packet": "complex_real_world/layer1_sensor_packet.json",
+      "frame": "complex_real_world/frame.jpg",
+      "audio": "complex_real_world/audio.wav",
+      "sensor_data": "complex_real_world/sensor_data.json",
+      "expected_output": "complex_real_world/expected_layer2_output.json"
+    },
+    {
+      "name": "conversation_event",
+      "input_packet": "conversation_event/layer1_sensor_packet.json",
+      "frame": "conversation_event/frame.jpg",
+      "audio": "conversation_event/audio.wav",
+      "sensor_data": "conversation_event/sensor_data.json",
+      "expected_output": "conversation_event/expected_layer2_output.json"
+    },
+    {
+      "name": "emergency_situation",
+      "input_packet": "emergency_situation/layer1_sensor_packet.json",
+      "frame": "emergency_situation/frame.jpg",
+      "audio": "emergency_situation/audio.wav",
+      "sensor_data": "emergency_situation/sensor_data.json",
+      "expected_output": "emergency_situation/expected_layer2_output.json"
+    },
+    {
+      "name": "home_environment",
+      "input_packet": "home_environment/layer1_sensor_packet.json",
+      "frame": "home_environment/frame.jpg",
+      "audio": "home_environment/audio.wav",
+      "sensor_data": "home_environment/sensor_data.json",
+      "expected_output": "home_environment/expected_layer2_output.json"
+    },
+    {
+      "name": "navigation_request",
+      "input_packet": "navigation_request/layer1_sensor_packet.json",
+      "frame": "navigation_request/frame.jpg",
+      "audio": "navigation_request/audio.wav",
+      "sensor_data": "navigation_request/sensor_data.json",
+      "expected_output": "navigation_request/expected_layer2_output.json"
+    },
+    {
+      "name": "park_walking",
+      "input_packet": "park_walking/layer1_sensor_packet.json",
+      "frame": "park_walking/frame.jpg",
+      "audio": "park_walking/audio.wav",
+      "sensor_data": "park_walking/sensor_data.json",
+      "expected_output": "park_walking/expected_layer2_output.json"
+    },
+    {
+      "name": "shopping_mall",
+      "input_packet": "shopping_mall/layer1_sensor_packet.json",
+      "frame": "shopping_mall/frame.jpg",
+      "audio": "shopping_mall/audio.wav",
+      "sensor_data": "shopping_mall/sensor_data.json",
+      "expected_output": "shopping_mall/expected_layer2_output.json"
+    }
+  ]
+}

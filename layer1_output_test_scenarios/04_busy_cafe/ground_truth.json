@@ -1,0 +1,21 @@
+{
+  "test_id": "04_busy_cafe",
+  "scene": "cafe",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "person",
+    "cup",
+    "chair",
+    "dining table"
+  ],
+  "speech": "I would like one cup of coffee, please.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Busy indoor scene with partially occluded objects",
+  "annotation_type": "class_labels_only"
+}

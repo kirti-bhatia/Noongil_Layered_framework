@@ -1,0 +1,34 @@
+{
+  "scene": {
+    "type": "shopping_mall"
+  },
+  "objects": [
+    {
+      "label": "person"
+    },
+    {
+      "label": "child"
+    },
+    {
+      "label": "shop"
+    },
+    {
+      "label": "escalator"
+    }
+  ],
+  "sounds": [
+    {
+      "label": "crowd_noise"
+    },
+    {
+      "label": "help_call"
+    }
+  ],
+  "user_activity": {
+    "state": "walking"
+  },
+  "speech_transcript": [
+    "Help me find the nearest exit. I think my child is lost."
+  ],
+  "timestamp": "2026-06-05T21:23:00"
+}

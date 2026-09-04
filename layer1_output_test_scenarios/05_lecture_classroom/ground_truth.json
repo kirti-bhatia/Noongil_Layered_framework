@@ -1,0 +1,21 @@
+{
+  "test_id": "05_lecture_classroom",
+  "scene": "classroom",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "person",
+    "chair",
+    "laptop",
+    "tv"
+  ],
+  "speech": "Today we will study artificial intelligence.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Classroom classification and lecture transcription",
+  "annotation_type": "class_labels_only"
+}

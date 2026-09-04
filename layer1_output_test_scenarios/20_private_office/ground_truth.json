@@ -1,0 +1,18 @@
+{
+  "test_id": "20_private_office",
+  "scene": "office",
+  "objects": [
+    "person",
+    "laptop",
+    "chair",
+    "cup"
+  ],
+  "speech": "Send this document to my manager.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "easy",
+  "purpose": "Simple office baseline",
+  "annotation_type": "class_labels_only"
+}

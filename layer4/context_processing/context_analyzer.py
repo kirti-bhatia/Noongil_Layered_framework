@@ -11,51 +11,15 @@ understanding of the current situation.
 """
 
 import json
-import os
 from datetime import datetime
 
-
-# ============================================================
-# PATHS
-# ============================================================
-
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-GRAPH_PATH = os.path.join(
-    BASE_DIR,
-    "..",
-    "output",
-    "context_graph.json"
+from layer4.config.paths import (
+    CONTEXT_GRAPH_PATH,
+    ANALYZED_CONTEXT_PATH,
+    ensure_output_directories,
 )
-
-OUTPUT_PATH = os.path.join(
-    BASE_DIR,
-    "..",
-    "output",
-    "analyzed_context.json"
-)
-
-
-# ============================================================
-# LOAD JSON
-# ============================================================
-
-def load_json(filepath):
-
-    if not os.path.exists(filepath):
-        print(f"[ERROR] File Not Found: {filepath}")
-        return {}
-
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        print(f"[SUCCESS] Loaded: {filepath}")
-        return data
-
-    except Exception as e:
-        print(f"[ERROR] Loading Failed: {e}")
-        return {}
+from layer4.utils.file_loader import load_json
+from layer4.utils.json_writer import save_json
 
 
 # ============================================================
@@ -68,68 +32,127 @@ def analyze_context(graph_data):
 
     analysis = {
         "timestamp": str(datetime.now()),
-        "scene_type": "unknown",
+        "scene_type": "general_environment",
         "important_entities": [],
-        "user_context": {},
+        "events": [],
+        "activities": [],
+        "user_context": {
+            "user_present": False,
+            "people_detected": 0
+        },
         "risk_level": "low",
         "summary": ""
     }
 
     nodes = graph_data.get("nodes", [])
+    edges = graph_data.get("edges", [])
 
     if not nodes:
         print("[WARNING] No Nodes Found")
         return analysis
 
     # --------------------------------------------------------
+    # SEPARATE NODE TYPES
+    # --------------------------------------------------------
+
+    entity_nodes = [
+        node
+        for node in nodes
+        if node.get("category") == "entity"
+    ]
+
+    event_nodes = [
+        node
+        for node in nodes
+        if node.get("category") == "event"
+    ]
+
+    agent_nodes = [
+        node
+        for node in nodes
+        if node.get("category") == "agent"
+    ]
+
+    # --------------------------------------------------------
     # ENTITY COLLECTION
     # --------------------------------------------------------
 
-    entities = []
+    important_entities = []
 
-    for node in nodes:
-
-        entity_name = node.get("id", "unknown_entity")
-        entity_type =(
-            node.get("entity_type")
-            or node.get("event_type")
-            or node.get("category")
-            or "unknown"
-        )
-
-        entities.append({
-            "name": entity_name,
-            "type": entity_type
+    for node in entity_nodes:
+        important_entities.append({
+            "name": node.get("id", "unknown_entity"),
+            "type": node.get("entity_type", "unknown")
         })
 
-    analysis["important_entities"] = entities
+    analysis["important_entities"] = important_entities
 
-    print(f"[INFO] Found {len(entities)} Entities")
+    print(f"[INFO] Found {len(important_entities)} Entities")
+
+    # --------------------------------------------------------
+    # EVENT COLLECTION
+    # --------------------------------------------------------
+
+    events = []
+
+    for node in event_nodes:
+        events.append({
+            "event_id": node.get("id", "unknown_event"),
+            "event_type": node.get("event_type", "unknown")
+        })
+
+    analysis["events"] = events
+
+    print(f"[INFO] Found {len(events)} Events")
+
+    # --------------------------------------------------------
+    # ACTIVITY COLLECTION
+    # --------------------------------------------------------
+
+    activities = []
+
+    for node in entity_nodes:
+        if str(node.get("entity_type", "")).lower() == "activity":
+            activity_name = node.get("id")
+
+            if activity_name:
+                activities.append(activity_name)
+
+    analysis["activities"] = activities
+
+    print(f"[INFO] Found {len(activities)} Activities")
 
     # --------------------------------------------------------
     # SCENE DETECTION
     # --------------------------------------------------------
 
-    scene_keywords = {
-        "road": "outdoor_navigation",
-        "car": "traffic_environment",
-        "vehicle": "traffic_environment",
-        "building": "urban_area",
-        "person": "human_activity",
-        "stairs": "mobility_environment",
-        "crosswalk": "road_crossing"
-    }
-
     detected_scene = "general_environment"
 
-    for entity in entities:
+    # First preference: location entity
+    for node in entity_nodes:
+        if str(node.get("entity_type", "")).lower() == "location":
+            detected_scene = str(
+                node.get("id", "general_environment")
+            ).lower()
+            break
 
-        name = entity["name"].lower()
+    # Second preference: user located_in relation
+    if detected_scene == "general_environment":
+        for edge in edges:
 
-        for keyword, scene in scene_keywords.items():
+            relation_type = (
+                edge.get("relation")
+                or edge.get("relation_type")
+                or edge.get("type")
+            )
 
-            if keyword in name:
-                detected_scene = scene
+            if (
+                str(edge.get("source", "")).lower() == "user"
+                and str(relation_type).lower() == "located_in"
+            ):
+                detected_scene = str(
+                    edge.get("target", "general_environment")
+                ).lower()
                 break
 
     analysis["scene_type"] = detected_scene
@@ -140,29 +163,42 @@ def analyze_context(graph_data):
     # USER CONTEXT
     # --------------------------------------------------------
 
-    user_context = {
-        "user_present": False,
-        "people_detected": 0
+    user_present = any(
+        str(node.get("id", "")).lower() == "user"
+        for node in agent_nodes
+    )
+
+    person_names = {
+        "person",
+        "human",
+        "child",
+        "adult",
+        "elderly",
+        "teacher",
+        "student",
+        "pedestrian"
     }
 
     people_count = 0
 
-    for entity in entities:
-        entity_name = entity["name"].lower()
-        entity_type = entity["type"].lower()
-        if entity_name in ["person","user","human"]:
-            people_count +=1
-        elif entity_type in ["person","user","human"]:
-            people_count +=1
+    for node in entity_nodes:
 
-    user_context["people_detected"] = people_count
+        entity_name = str(node.get("id", "")).lower()
+        entity_type = str(node.get("entity_type", "")).lower()
 
-    if people_count > 0:
-        user_context["user_present"] = True
+        if (
+            entity_name in person_names
+            or entity_type in person_names
+        ):
+            people_count += 1
 
-    analysis["user_context"] = user_context
+    analysis["user_context"] = {
+        "user_present": user_present,
+        "people_detected": people_count
+    }
 
-    print(f"[INFO] People Detected: {people_count}")
+    print(f"[INFO] User Present: {user_present}")
+    print(f"[INFO] Other People Detected: {people_count}")
 
     # --------------------------------------------------------
     # RISK ANALYSIS
@@ -170,24 +206,43 @@ def analyze_context(graph_data):
 
     risk_level = "low"
 
-    danger_keywords = [
+    medium_risk_terms = {
         "vehicle",
         "car",
         "truck",
         "stairs",
+        "traffic",
+        "crosswalk",
+        "obstacle"
+    }
+
+    high_risk_terms = {
         "fire",
-        "traffic"
-    ]
+        "collision",
+        "accident",
+        "emergency",
+        "help_call",
+        "smoke",
+        "weapon"
+    }
 
-    for entity in entities:
+    observed_terms = set()
 
-        name = entity["name"].lower()
+    for entity in important_entities:
+        observed_terms.add(str(entity["name"]).lower())
+        observed_terms.add(str(entity["type"]).lower())
 
-        if any(word in name for word in danger_keywords):
-            risk_level = "medium"
+    for event in events:
+        observed_terms.add(str(event["event_type"]).lower())
 
-    if people_count > 5:
+    if observed_terms.intersection(high_risk_terms):
         risk_level = "high"
+
+    elif observed_terms.intersection(medium_risk_terms):
+        risk_level = "medium"
+
+    elif people_count > 5:
+        risk_level = "medium"
 
     analysis["risk_level"] = risk_level
 
@@ -199,9 +254,11 @@ def analyze_context(graph_data):
 
     summary = (
         f"Scene: {detected_scene}. "
-        f"Entities detected: {len(entities)}. "
-        f"People: {people_count}. "
-        f"Risk Level: {risk_level}."
+        f"Entities detected: {len(important_entities)}. "
+        f"Events detected: {len(events)}. "
+        f"Activities detected: {len(activities)}. "
+        f"Other people detected: {people_count}. "
+        f"Risk level: {risk_level}."
     )
 
     analysis["summary"] = summary
@@ -212,33 +269,18 @@ def analyze_context(graph_data):
 
 
 # ============================================================
-# SAVE JSON
-# ============================================================
-
-def save_json(data, filepath):
-
-    try:
-
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=4)
-
-        print(f"[SUCCESS] Saved: {filepath}")
-
-    except Exception as e:
-        print(f"[ERROR] Save Failed: {e}")
-
-
-# ============================================================
 # MAIN
 # ============================================================
 
 def main():
 
+    ensure_output_directories()
+
     print("\n" + "=" * 60)
     print("NOONGIL-X CONTEXT ANALYZER")
     print("=" * 60)
 
-    graph_data = load_json(GRAPH_PATH)
+    graph_data = load_json(CONTEXT_GRAPH_PATH)
 
     if not graph_data:
         print("[ERROR] No Context Graph Available")
@@ -246,11 +288,11 @@ def main():
 
     analysis = analyze_context(graph_data)
 
-    save_json(analysis, OUTPUT_PATH)
+    save_json(analysis, ANALYZED_CONTEXT_PATH)
 
-    print("\n============================================================")
+    print("\n" + "=" * 60)
     print("CONTEXT ANALYSIS SUMMARY")
-    print("============================================================")
+    print("=" * 60)
     print(json.dumps(analysis, indent=4))
 
 

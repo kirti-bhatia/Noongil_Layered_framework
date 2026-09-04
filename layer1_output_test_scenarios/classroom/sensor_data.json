@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-06-04T11:00:00Z",
+  "spatial": {
+    "latitude": 31.6342,
+    "longitude": 74.8721,
+    "altitude_m": 230.0,
+    "horizontal_accuracy_m": 4.0,
+    "heading_degrees": 92.0,
+    "speed_mps": 0.0
+  },
+  "motion": {
+    "accelerometer_mps2": {
+      "x": 0.01,
+      "y": 0.02,
+      "z": 9.8
+    },
+    "gyroscope_rps": {
+      "x": 0.01,
+      "y": 0.005,
+      "z": 0.0033333333333333335
+    },
+    "magnetometer_ut": {
+      "x": 21.3,
+      "y": -4.8,
+      "z": 38.1
+    }
+  },
+  "interaction": {
+    "type": "voice_activation",
+    "active": true
+  },
+  "device": {
+    "type": "android_phone",
+    "battery_percent": 78,
+    "network": "wifi"
+  },
+  "wearable": {
+    "type": "wireless_earphones",
+    "connected": true,
+    "battery_percent": 71
+  }
+}

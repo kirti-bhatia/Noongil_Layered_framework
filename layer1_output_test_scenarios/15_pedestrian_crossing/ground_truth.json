@@ -1,0 +1,20 @@
+{
+  "test_id": "15_pedestrian_crossing",
+  "scene": "street",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "car",
+    "car",
+    "traffic light"
+  ],
+  "speech": "The pedestrian signal is now active.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "hard",
+  "purpose": "Crossing safety and mixed foreground objects",
+  "annotation_type": "class_labels_only"
+}

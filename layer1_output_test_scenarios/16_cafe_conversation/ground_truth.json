@@ -1,0 +1,21 @@
+{
+  "test_id": "16_cafe_conversation",
+  "scene": "cafe",
+  "objects": [
+    "person",
+    "person",
+    "cup",
+    "cup",
+    "dining table",
+    "chair",
+    "chair"
+  ],
+  "speech": "Can you read the menu for me?",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "easy",
+  "purpose": "Close conversation scene and short speech",
+  "annotation_type": "class_labels_only"
+}

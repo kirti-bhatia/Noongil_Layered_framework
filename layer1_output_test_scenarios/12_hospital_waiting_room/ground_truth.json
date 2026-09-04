@@ -1,0 +1,21 @@
+{
+  "test_id": "12_hospital_waiting_room",
+  "scene": "hospital",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "chair",
+    "chair",
+    "chair",
+    "handbag"
+  ],
+  "speech": "The doctor will see you in ten minutes.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Hospital subclass different from a corridor",
+  "annotation_type": "class_labels_only"
+}

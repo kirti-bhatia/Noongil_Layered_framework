@@ -1,0 +1,19 @@
+{
+  "test_id": "17_park_ball_play",
+  "scene": "park",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "sports ball",
+    "bench"
+  ],
+  "speech": "People are playing with a ball nearby.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Action-rich park image and small-object detection",
+  "annotation_type": "class_labels_only"
+}

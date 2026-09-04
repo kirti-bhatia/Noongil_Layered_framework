@@ -1,0 +1,398 @@
+{
+    "packet_id": "MSP_20260805T190146_0D69B29C",
+    "schema_version": "1.0",
+    "created_at": "2026-08-05T19:01:46.577+00:00",
+    "source_device": {
+        "device_id": "PHONE_001",
+        "device_type": "android_smartphone",
+        "device_name": "NOONGIL Phone",
+        "operating_system": "Android",
+        "network_type": "wifi",
+        "network_strength": 0.88,
+        "network_latency_ms": 21.0,
+        "battery_level": 0.72,
+        "is_charging": false,
+        "application_version": "1.0.0",
+        "available_sensors": [
+            "camera",
+            "microphone",
+            "gps",
+            "accelerometer",
+            "gyroscope",
+            "magnetometer",
+            "touchscreen"
+        ],
+        "metadata": {}
+    },
+    "acquisition_mode": "navigation",
+    "modalities": {
+        "vision": {
+            "metadata": {
+                "modality": "vision",
+                "status": "observed",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "arrival_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "sequence_number": 101,
+                "sampling_rate_hz": 15.0,
+                "latency_ms": 18.4,
+                "source_device_id": "PHONE_001",
+                "data_reference": "FRAME_000101",
+                "preprocessing_steps": [
+                    "decoded",
+                    "resized",
+                    "normalized"
+                ],
+                "limitations": [],
+                "metadata": {}
+            },
+            "frame_id": "FRAME_000101",
+            "width": 640,
+            "height": 480,
+            "channels": 3,
+            "encoding": "jpeg",
+            "color_space": "RGB",
+            "frame_rate_fps": 15.0,
+            "brightness_score": 0.82,
+            "sharpness_score": 0.76,
+            "contrast_score": 0.71,
+            "frame_integrity_score": 0.98,
+            "frame_path": "output/layer1/raw/vision/frame_000101.jpg",
+            "encoded_frame": null
+        },
+        "audio": {
+            "metadata": {
+                "modality": "audio",
+                "status": "observed",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "arrival_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "sequence_number": 52,
+                "sampling_rate_hz": 16000.0,
+                "latency_ms": 24.0,
+                "source_device_id": "PHONE_001",
+                "data_reference": "AUDIO_000052",
+                "preprocessing_steps": [
+                    "decoded",
+                    "mono_conversion",
+                    "amplitude_normalization"
+                ],
+                "limitations": [],
+                "metadata": {}
+            },
+            "chunk_id": "AUDIO_000052",
+            "sample_rate_hz": 16000,
+            "channels": 1,
+            "sample_width_bits": 16,
+            "duration_ms": 1000.0,
+            "encoding": "pcm_s16le",
+            "amplitude_score": 0.69,
+            "signal_to_noise_score": 0.64,
+            "clipping_ratio": 0.01,
+            "silence_ratio": 0.12,
+            "packet_integrity_score": 0.99,
+            "audio_path": "output/layer1/raw/audio/audio_000052.wav",
+            "encoded_audio": null,
+            "feature_type": null,
+            "feature_reference": null
+        },
+        "spatial": {
+            "metadata": {
+                "modality": "spatial",
+                "status": "observed",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "arrival_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "sequence_number": 18,
+                "sampling_rate_hz": 1.0,
+                "latency_ms": 42.0,
+                "source_device_id": "PHONE_001",
+                "data_reference": null,
+                "preprocessing_steps": [],
+                "limitations": [],
+                "metadata": {}
+            },
+            "latitude": 31.634,
+            "longitude": 74.872,
+            "altitude_meters": 234.0,
+            "horizontal_accuracy_meters": 8.4,
+            "vertical_accuracy_meters": null,
+            "heading_degrees": 83.2,
+            "heading_accuracy_degrees": null,
+            "speed_meters_per_second": 0.9,
+            "provider": "gps"
+        },
+        "motion": {
+            "metadata": {
+                "modality": "motion",
+                "status": "observed",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "arrival_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "sequence_number": 320,
+                "sampling_rate_hz": 50.0,
+                "latency_ms": 7.5,
+                "source_device_id": "PHONE_001",
+                "data_reference": null,
+                "preprocessing_steps": [],
+                "limitations": [],
+                "metadata": {}
+            },
+            "accelerometer": {
+                "x": 0.18,
+                "y": 9.72,
+                "z": 0.41,
+                "unit": "m/s^2"
+            },
+            "gyroscope": {
+                "x": 0.02,
+                "y": 0.11,
+                "z": -0.04,
+                "unit": "rad/s"
+            },
+            "magnetometer": null,
+            "linear_acceleration": null,
+            "motion_intensity": 0.43,
+            "orientation_change_score": 0.18,
+            "sampling_continuity_score": 0.97,
+            "sensor_saturation_score": 0.02
+        },
+        "interaction": {
+            "metadata": {
+                "modality": "interaction",
+                "status": "observed",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "arrival_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "sequence_number": 4,
+                "sampling_rate_hz": null,
+                "latency_ms": null,
+                "source_device_id": "PHONE_001",
+                "data_reference": null,
+                "preprocessing_steps": [],
+                "limitations": [],
+                "metadata": {}
+            },
+            "interaction_id": "INTERACTION_000004",
+            "interaction_type": "button",
+            "action": "navigation_mode_requested",
+            "value": null,
+            "emergency_flag": false
+        },
+        "wearable": {
+            "metadata": {
+                "modality": "wearable",
+                "status": "observed",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "arrival_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "sequence_number": null,
+                "sampling_rate_hz": null,
+                "latency_ms": null,
+                "source_device_id": "PHONE_001",
+                "data_reference": null,
+                "preprocessing_steps": [],
+                "limitations": [],
+                "metadata": {}
+            },
+            "device_id": "EARPHONE_001",
+            "device_name": "realme Buds T200",
+            "device_type": "wireless_earphones",
+            "connected": true,
+            "connection_type": "bluetooth",
+            "battery_level": null,
+            "capabilities": [
+                "audio_output",
+                "microphone_input"
+            ],
+            "microphone_available": true,
+            "audio_output_available": true,
+            "haptic_output_available": false
+        },
+        "environment": {
+            "metadata": {
+                "modality": "environment",
+                "status": "not_requested",
+                "source_timestamp": null,
+                "arrival_timestamp": null,
+                "sequence_number": null,
+                "sampling_rate_hz": null,
+                "latency_ms": null,
+                "source_device_id": null,
+                "data_reference": null,
+                "preprocessing_steps": [],
+                "limitations": [],
+                "metadata": {}
+            },
+            "weather": {},
+            "map_context": {},
+            "traffic_context": {},
+            "transport_context": {},
+            "provider_names": [],
+            "retrieved_at": null,
+            "cache_age_seconds": null
+        }
+    },
+    "synchronization": {
+        "synchronization_id": "SYNC_20260805T190146_6D69BDC6",
+        "status": "synchronized",
+        "reference_timestamp": "2026-08-05T19:01:46.577+00:00",
+        "window_ms": 250.0,
+        "aligned_modalities": [
+            "vision",
+            "audio",
+            "spatial",
+            "motion",
+            "interaction",
+            "wearable"
+        ],
+        "missing_modalities": [],
+        "stale_modalities": [],
+        "modality_alignments": {
+            "vision": {
+                "modality": "vision",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "offset_ms": 0.0,
+                "tolerance_ms": 250.0,
+                "alignment_score": 0.95,
+                "within_window": true
+            },
+            "audio": {
+                "modality": "audio",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "offset_ms": 0.0,
+                "tolerance_ms": 250.0,
+                "alignment_score": 0.95,
+                "within_window": true
+            },
+            "spatial": {
+                "modality": "spatial",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "offset_ms": 0.0,
+                "tolerance_ms": 250.0,
+                "alignment_score": 0.95,
+                "within_window": true
+            },
+            "motion": {
+                "modality": "motion",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "offset_ms": 0.0,
+                "tolerance_ms": 250.0,
+                "alignment_score": 0.95,
+                "within_window": true
+            },
+            "interaction": {
+                "modality": "interaction",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "offset_ms": 0.0,
+                "tolerance_ms": 250.0,
+                "alignment_score": 0.95,
+                "within_window": true
+            },
+            "wearable": {
+                "modality": "wearable",
+                "source_timestamp": "2026-08-05T19:01:46.577+00:00",
+                "offset_ms": 0.0,
+                "tolerance_ms": 250.0,
+                "alignment_score": 0.95,
+                "within_window": true
+            }
+        },
+        "overall_alignment_score": 0.95
+    },
+    "sensor_confidence": {
+        "confidence_id": "CONF_20260805T190146_E7EF4593",
+        "modality_confidences": {
+            "vision": {
+                "modality": "vision",
+                "signal_quality": 0.82,
+                "temporal_alignment": 0.95,
+                "sensor_health": 0.98,
+                "freshness": 0.97,
+                "cross_modal_agreement": 0.91,
+                "conflict_score": 0.09,
+                "final_confidence": 0.86,
+                "reliability_level": "high",
+                "limitations": [],
+                "calculation_details": {}
+            },
+            "audio": {
+                "modality": "audio",
+                "signal_quality": 0.64,
+                "temporal_alignment": 0.92,
+                "sensor_health": 0.96,
+                "freshness": 0.95,
+                "cross_modal_agreement": 0.84,
+                "conflict_score": 0.16,
+                "final_confidence": 0.67,
+                "reliability_level": "moderate",
+                "limitations": [
+                    "moderate_background_noise"
+                ],
+                "calculation_details": {}
+            },
+            "spatial": {
+                "modality": "spatial",
+                "signal_quality": 0.74,
+                "temporal_alignment": 0.88,
+                "sensor_health": 0.97,
+                "freshness": 0.9,
+                "cross_modal_agreement": 0.89,
+                "conflict_score": 0.11,
+                "final_confidence": 0.75,
+                "reliability_level": "moderate",
+                "limitations": [],
+                "calculation_details": {}
+            },
+            "motion": {
+                "modality": "motion",
+                "signal_quality": 0.93,
+                "temporal_alignment": 0.98,
+                "sensor_health": 0.98,
+                "freshness": 0.99,
+                "cross_modal_agreement": 0.94,
+                "conflict_score": 0.06,
+                "final_confidence": 0.91,
+                "reliability_level": "high",
+                "limitations": [],
+                "calculation_details": {}
+            },
+            "interaction": {
+                "modality": "interaction",
+                "signal_quality": 0.99,
+                "temporal_alignment": 0.99,
+                "sensor_health": 0.99,
+                "freshness": 0.99,
+                "cross_modal_agreement": 1.0,
+                "conflict_score": 0.0,
+                "final_confidence": 0.99,
+                "reliability_level": "high",
+                "limitations": [],
+                "calculation_details": {}
+            }
+        },
+        "normalized_weights": {
+            "vision": 0.21,
+            "audio": 0.16,
+            "spatial": 0.18,
+            "motion": 0.22,
+            "interaction": 0.23
+        },
+        "overall_confidence": 0.84,
+        "generated_at": "2026-08-05T19:01:46.577+00:00"
+    },
+    "recovery": {
+        "recovery_used": false,
+        "recovered_modalities": [],
+        "unavailable_modalities": [],
+        "modality_recoveries": {},
+        "generated_at": "2026-08-05T19:01:46.577+00:00"
+    },
+    "routing": {
+        "source_layer": "layer1",
+        "destination_layer": "layer2",
+        "semantic_processing_performed": false,
+        "packet_priority": "high",
+        "dispatch_status": "pending",
+        "dispatched_at": null,
+        "metadata": {}
+    },
+    "packet_sequence_number": 1,
+    "scenario_name": "navigation_demo",
+    "warnings": [],
+    "metadata": {}
+}

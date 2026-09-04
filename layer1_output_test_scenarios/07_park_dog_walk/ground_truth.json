@@ -1,0 +1,17 @@
+{
+  "test_id": "07_park_dog_walk",
+  "scene": "park",
+  "objects": [
+    "person",
+    "dog",
+    "bench"
+  ],
+  "speech": "My dog is walking beside me in the park.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "easy",
+  "purpose": "Outdoor park and animal detection",
+  "annotation_type": "class_labels_only"
+}

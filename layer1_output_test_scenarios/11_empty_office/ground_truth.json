@@ -1,0 +1,23 @@
+{
+  "test_id": "11_empty_office",
+  "scene": "office",
+  "objects": [
+    "chair",
+    "chair",
+    "chair",
+    "chair",
+    "laptop",
+    "laptop",
+    "laptop",
+    "keyboard",
+    "mouse"
+  ],
+  "speech": "The office is empty and the computers are ready.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Office recognition without people",
+  "annotation_type": "class_labels_only"
+}

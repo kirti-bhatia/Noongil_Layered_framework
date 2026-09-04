@@ -1,0 +1,20 @@
+{
+  "test_id": "08_urban_traffic_junction",
+  "scene": "street",
+  "objects": [
+    "car",
+    "car",
+    "car",
+    "person",
+    "person",
+    "traffic light"
+  ],
+  "speech": "Wait for the green signal before crossing.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "hard",
+  "purpose": "Traffic safety and small distant objects",
+  "annotation_type": "class_labels_only"
+}

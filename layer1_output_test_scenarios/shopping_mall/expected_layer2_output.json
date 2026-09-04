@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-06-04T14:15:00",
+  "scene": {
+    "type": "shopping_mall",
+    "confidence": 0.94
+  },
+  "objects": [
+    {
+      "label": "shop",
+      "confidence": 0.95
+    },
+    {
+      "label": "customer",
+      "confidence": 0.93
+    },
+    {
+      "label": "escalator",
+      "confidence": 0.92
+    }
+  ],
+  "speech_transcript": [
+    "Find a sports shoe store."
+  ],
+  "user_activity": {
+    "state": "walking",
+    "confidence": 0.91
+  }
+}

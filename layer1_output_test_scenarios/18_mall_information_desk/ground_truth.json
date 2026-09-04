@@ -1,0 +1,19 @@
+{
+  "test_id": "18_mall_information_desk",
+  "scene": "shopping_mall",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "handbag",
+    "backpack"
+  ],
+  "speech": "Which floor has the electronics store?",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "INFORMATION DESK",
+  "difficulty": "hard",
+  "purpose": "Combined mall, object, speech and OCR evaluation",
+  "annotation_type": "class_labels_only"
+}

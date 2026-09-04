@@ -1,0 +1,20 @@
+{
+  "test_id": "03_hospital_corridor",
+  "scene": "hospital",
+  "objects": [
+    "person",
+    "person",
+    "bed",
+    "chair",
+    "chair",
+    "chair"
+  ],
+  "speech": "Please guide me to the emergency department.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "easy",
+  "purpose": "Hospital scene, people, bed and seating",
+  "annotation_type": "class_labels_only"
+}

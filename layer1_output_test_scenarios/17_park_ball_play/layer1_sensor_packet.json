@@ -1,0 +1,108 @@
+{
+  "packet_metadata": {
+    "packet_id": "MSP_TEST_025",
+    "packet_type": "noongil_layer1_sensor_packet",
+    "schema_version": "1.0",
+    "created_at": "2026-08-30T20:25:00Z",
+    "source_frame_id": "SYNC_TEST_025",
+    "build_status": "complete",
+    "source_mode": "test_files",
+    "simulated": true,
+    "scenario": "17_park_ball_play"
+  },
+  "modalities": {
+    "vision": {
+      "status": "observed",
+      "timestamp": "2026-08-30T20:25:00Z",
+      "frame_id": "FRAME_TEST_025",
+      "frame_path": "image.png",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "channels": 3
+    },
+    "audio": {
+      "status": "observed",
+      "timestamp": "2026-08-30T20:25:00Z",
+      "audio_path": "audio.wav",
+      "format": "wav",
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bits": 16,
+      "duration_ms": 2125.0
+    },
+    "spatial": {
+      "status": "unavailable"
+    },
+    "motion": {
+      "status": "unavailable"
+    },
+    "interaction": {
+      "status": "observed",
+      "type": "scenario_replay",
+      "active": true
+    },
+    "device": {
+      "status": "observed",
+      "type": "test_fixture",
+      "battery_percent": 100,
+      "network": "offline_test"
+    },
+    "wearable": {
+      "status": "unavailable"
+    }
+  },
+  "synchronization": {
+    "frame_id": "SYNC_TEST_025",
+    "anchor_timestamp": "2026-08-30T20:25:00Z",
+    "status": "synchronized",
+    "aligned_modalities": [
+      "vision",
+      "audio"
+    ],
+    "missing_modalities": [
+      "spatial",
+      "motion",
+      "wearable"
+    ],
+    "stale_modalities": []
+  },
+  "sensor_confidence": {
+    "vision": {
+      "final_confidence": 0.95
+    },
+    "audio": {
+      "final_confidence": 0.95
+    },
+    "spatial": {
+      "final_confidence": 0.0
+    },
+    "motion": {
+      "final_confidence": 0.0
+    },
+    "overall_confidence": 0.95
+  },
+  "missing_modality_recovery": {
+    "recovery_used": false,
+    "recovered_modalities": [],
+    "unavailable_modalities": [
+      "spatial",
+      "motion",
+      "wearable"
+    ]
+  },
+  "routing": {
+    "source_layer": "layer1",
+    "destination_layer": "layer2",
+    "packet_priority": "normal",
+    "ready_for_layer2": true
+  },
+  "provenance": {
+    "source_device": "test_fixture",
+    "camera_source": "scenario_image",
+    "microphone_source": "scenario_audio",
+    "acquisition_mode": "replay_fixture",
+    "processing_version": "1.0",
+    "ground_truth_used_as_input": false
+  }
+}

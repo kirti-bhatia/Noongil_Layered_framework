@@ -1,0 +1,18 @@
+{
+  "test_id": "02_modern_living_room",
+  "scene": "home",
+  "objects": [
+    "couch",
+    "chair",
+    "dining table",
+    "potted plant"
+  ],
+  "speech": "Please tell me where the television is.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "iStock Credit: Vials",
+  "difficulty": "medium",
+  "purpose": "Indoor home classification; source image contains a watermark",
+  "annotation_type": "class_labels_only"
+}

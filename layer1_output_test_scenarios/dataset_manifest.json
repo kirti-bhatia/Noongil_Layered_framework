@@ -1,0 +1,392 @@
+[
+  {
+    "test_id": "01_office_meeting",
+    "scene": "office",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "person",
+      "person",
+      "laptop",
+      "laptop",
+      "laptop",
+      "laptop"
+    ],
+    "speech": "Please open the project report for today's meeting.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Crowded office scene and repeated-object counting",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "02_modern_living_room",
+    "scene": "home",
+    "objects": [
+      "couch",
+      "chair",
+      "dining table",
+      "potted plant"
+    ],
+    "speech": "Please tell me where the television is.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "iStock Credit: Vials",
+    "difficulty": "medium",
+    "purpose": "Indoor home classification; source image contains a watermark",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "03_hospital_corridor",
+    "scene": "hospital",
+    "objects": [
+      "person",
+      "person",
+      "bed",
+      "chair",
+      "chair",
+      "chair"
+    ],
+    "speech": "Please guide me to the emergency department.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "easy",
+    "purpose": "Hospital scene, people, bed and seating",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "04_busy_cafe",
+    "scene": "cafe",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "person",
+      "cup",
+      "chair",
+      "dining table"
+    ],
+    "speech": "I would like one cup of coffee, please.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Busy indoor scene with partially occluded objects",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "05_lecture_classroom",
+    "scene": "classroom",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "person",
+      "chair",
+      "laptop",
+      "tv"
+    ],
+    "speech": "Today we will study artificial intelligence.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Classroom classification and lecture transcription",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "06_mall_escalator",
+    "scene": "shopping_mall",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "handbag",
+      "backpack"
+    ],
+    "speech": "The nearest exit is on the ground floor.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Mall classification with people at different depths",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "07_park_dog_walk",
+    "scene": "park",
+    "objects": [
+      "person",
+      "dog",
+      "bench"
+    ],
+    "speech": "My dog is walking beside me in the park.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "easy",
+    "purpose": "Outdoor park and animal detection",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "08_urban_traffic_junction",
+    "scene": "street",
+    "objects": [
+      "car",
+      "car",
+      "car",
+      "person",
+      "person",
+      "traffic light"
+    ],
+    "speech": "Wait for the green signal before crossing.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "hard",
+    "purpose": "Traffic safety and small distant objects",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "09_highway_emergency",
+    "scene": "road",
+    "objects": [
+      "car",
+      "truck",
+      "person",
+      "person"
+    ],
+    "speech": "There has been an accident. Please call for help.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "hard",
+    "purpose": "Safety-critical roadside situation",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "10_home_kitchen",
+    "scene": "home",
+    "objects": [
+      "refrigerator",
+      "oven",
+      "sink",
+      "dining table"
+    ],
+    "speech": "The kettle is boiling in the kitchen.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Home subclass different from a living room",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "11_empty_office",
+    "scene": "office",
+    "objects": [
+      "chair",
+      "chair",
+      "chair",
+      "chair",
+      "laptop",
+      "laptop",
+      "laptop",
+      "keyboard",
+      "mouse"
+    ],
+    "speech": "The office is empty and the computers are ready.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Office recognition without people",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "12_hospital_waiting_room",
+    "scene": "hospital",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "chair",
+      "chair",
+      "chair",
+      "handbag"
+    ],
+    "speech": "The doctor will see you in ten minutes.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Hospital subclass different from a corridor",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "13_empty_classroom_silence",
+    "scene": "classroom",
+    "objects": [
+      "chair",
+      "chair",
+      "chair",
+      "dining table",
+      "tv"
+    ],
+    "speech": "",
+    "sounds": [],
+    "recognized_text": "",
+    "difficulty": "hard",
+    "purpose": "No-person image and true silent-audio negative control",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "14_night_road",
+    "scene": "road",
+    "objects": [
+      "car",
+      "car",
+      "car",
+      "truck",
+      "traffic light"
+    ],
+    "speech": "A vehicle is approaching from the right.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "hard",
+    "purpose": "Low-light road and vehicle detection",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "15_pedestrian_crossing",
+    "scene": "street",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "car",
+      "car",
+      "traffic light"
+    ],
+    "speech": "The pedestrian signal is now active.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "hard",
+    "purpose": "Crossing safety and mixed foreground objects",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "16_cafe_conversation",
+    "scene": "cafe",
+    "objects": [
+      "person",
+      "person",
+      "cup",
+      "cup",
+      "dining table",
+      "chair",
+      "chair"
+    ],
+    "speech": "Can you read the menu for me?",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "easy",
+    "purpose": "Close conversation scene and short speech",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "17_park_ball_play",
+    "scene": "park",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "sports ball",
+      "bench"
+    ],
+    "speech": "People are playing with a ball nearby.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Action-rich park image and small-object detection",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "18_mall_information_desk",
+    "scene": "shopping_mall",
+    "objects": [
+      "person",
+      "person",
+      "person",
+      "handbag",
+      "backpack"
+    ],
+    "speech": "Which floor has the electronics store?",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "INFORMATION DESK",
+    "difficulty": "hard",
+    "purpose": "Combined mall, object, speech and OCR evaluation",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "19_home_bedroom",
+    "scene": "home",
+    "objects": [
+      "bed",
+      "tv",
+      "chair",
+      "clock"
+    ],
+    "speech": "Please switch off the bedroom light.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "medium",
+    "purpose": "Home subclass and indoor depth",
+    "annotation_type": "class_labels_only"
+  },
+  {
+    "test_id": "20_private_office",
+    "scene": "office",
+    "objects": [
+      "person",
+      "laptop",
+      "chair",
+      "cup"
+    ],
+    "speech": "Send this document to my manager.",
+    "sounds": [
+      "speech"
+    ],
+    "recognized_text": "",
+    "difficulty": "easy",
+    "purpose": "Simple office baseline",
+    "annotation_type": "class_labels_only"
+  }
+]

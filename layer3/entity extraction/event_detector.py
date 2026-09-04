@@ -308,26 +308,26 @@ def detect_emergency_events(data):
         .get("type")
     )
 
-    emergency_words = [
+    strong_emergency_words = [
 
-        "help",
+        
         "emergency",
         "accident",
         "danger",
         "fell"
     ]
 
+    weak_emergency_words = ["help"]
+
     # Speech detection
 
     for sentence in transcripts:
 
         lower = sentence.lower()
+        has_strong = any( word in lower for word in strong_emergency_words )
 
-        if any(
-            word in lower
-            for word in emergency_words
-        ):
-
+        has_weak_with_strong = any( word in lower for word in weak_emergency_words ) 
+        if has_strong or has_weak_with_strong:
             print(
                 "[EVENT FOUND] "
                 "Emergency From Speech"
@@ -358,8 +358,6 @@ def detect_emergency_events(data):
         )
 
         if (
-            "help" in label
-            or
             "alarm" in label
             or
             "siren" in label

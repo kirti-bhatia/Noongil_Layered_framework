@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-06-04T10:30:15",
+  "scene": {
+    "type": "park",
+    "confidence": 0.95
+  },
+  "objects": [
+    {
+      "label": "person",
+      "confidence": 0.98
+    },
+    {
+      "label": "dog",
+      "confidence": 0.93
+    },
+    {
+      "label": "bench",
+      "confidence": 0.89
+    }
+  ],
+  "speech_transcript": [
+    "Guide me to the nearest gate."
+  ],
+  "sounds": [
+    {
+      "label": "birds_chirping",
+      "confidence": 0.91
+    }
+  ],
+  "user_activity": {
+    "state": "walking",
+    "confidence": 0.96
+  },
+  "location": {
+    "latitude": 31.634,
+    "longitude": 74.872
+  }
+}

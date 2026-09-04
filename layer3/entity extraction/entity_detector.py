@@ -117,6 +117,20 @@ def create_entity(name, entity_type, source):
         "source": source
     }
 
+REQUEST_SIGNAL_TERMS = {
+    "guide", "take", "navigate", "find", "show", "help",
+    "want", "need", "looking", "search", "go", "reach", "locate"
+}
+
+def is_request_sentence(sentence):
+    """
+    Returns True only if the sentence actually contains a
+    request/navigation signal. Prevents ordinary statements
+    (lectures, conversation) from being treated as requests.
+    """
+    lowered = sentence.lower()
+    return any(term in lowered for term in REQUEST_SIGNAL_TERMS)
+
 
 # =========================================================
 # LOAD JSON INPUT
@@ -310,6 +324,8 @@ def extract_speech_entities(data):
         # Helps detect gate, store, hospital etc.
         # -------------------------------------------------
 
+        sentence_is_request = is_request_sentence(sentence)
+
         for token in doc:
 
             if token.pos_ == "NOUN":
@@ -319,6 +335,8 @@ def extract_speech_entities(data):
                     "noun",
                     "speech"
                 )
+
+                entity["is_request"] = sentence_is_request
 
                 entities.append(entity)
 

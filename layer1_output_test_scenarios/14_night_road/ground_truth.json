@@ -1,0 +1,19 @@
+{
+  "test_id": "14_night_road",
+  "scene": "road",
+  "objects": [
+    "car",
+    "car",
+    "car",
+    "truck",
+    "traffic light"
+  ],
+  "speech": "A vehicle is approaching from the right.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "hard",
+  "purpose": "Low-light road and vehicle detection",
+  "annotation_type": "class_labels_only"
+}

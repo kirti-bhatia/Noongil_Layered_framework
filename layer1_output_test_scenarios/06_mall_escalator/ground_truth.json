@@ -1,0 +1,19 @@
+{
+  "test_id": "06_mall_escalator",
+  "scene": "shopping_mall",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "handbag",
+    "backpack"
+  ],
+  "speech": "The nearest exit is on the ground floor.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Mall classification with people at different depths",
+  "annotation_type": "class_labels_only"
+}

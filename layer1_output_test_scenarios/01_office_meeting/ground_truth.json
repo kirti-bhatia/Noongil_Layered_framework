@@ -1,0 +1,23 @@
+{
+  "test_id": "01_office_meeting",
+  "scene": "office",
+  "objects": [
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "laptop",
+    "laptop",
+    "laptop",
+    "laptop"
+  ],
+  "speech": "Please open the project report for today's meeting.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Crowded office scene and repeated-object counting",
+  "annotation_type": "class_labels_only"
+}

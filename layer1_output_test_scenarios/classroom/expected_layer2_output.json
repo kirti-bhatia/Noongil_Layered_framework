@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-06-04T11:00:00",
+  "scene": {
+    "type": "classroom",
+    "confidence": 0.97
+  },
+  "objects": [
+    {
+      "label": "teacher",
+      "confidence": 0.94
+    },
+    {
+      "label": "student",
+      "confidence": 0.96
+    },
+    {
+      "label": "projector",
+      "confidence": 0.91
+    }
+  ],
+  "speech_transcript": [
+    "Today's topic is machine learning."
+  ],
+  "user_activity": {
+    "state": "sitting",
+    "confidence": 0.95
+  }
+}

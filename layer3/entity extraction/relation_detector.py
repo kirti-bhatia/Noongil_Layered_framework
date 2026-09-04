@@ -134,7 +134,7 @@ def extract_relations(entity_data):
             activities.append(entity["name"])
 
         elif entity_type == "noun":
-            nouns.append(entity["name"])
+            nouns.append(entity)
 
     print(f"[INFO] Locations Found: {locations}")
     print(f"[INFO] Objects Found: {objects}")
@@ -203,7 +203,27 @@ def extract_relations(entity_data):
     # USER REQUESTING NOUN
     # ------------------------------------------
 
-    for noun in nouns:
+    # for noun in nouns:
+
+    #     relation = create_relation(
+    #         "user",
+    #         "requesting",
+    #         noun
+    #     )
+
+    #     relations.append(relation)
+
+    #     print(
+    #         f"[RELATION] user -> requesting -> {noun}"
+    #     )
+
+    # return relations
+    for noun_entity in nouns:
+
+        if not noun_entity.get("is_request", False):
+            continue
+
+        noun = noun_entity["name"]
 
         relation = create_relation(
             "user",
@@ -219,6 +239,7 @@ def extract_relations(entity_data):
 
     return relations
 
+    
 
 # =====================================================
 # SAVE OUTPUT

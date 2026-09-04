@@ -1,0 +1,18 @@
+{
+  "test_id": "10_home_kitchen",
+  "scene": "home",
+  "objects": [
+    "refrigerator",
+    "oven",
+    "sink",
+    "dining table"
+  ],
+  "speech": "The kettle is boiling in the kitchen.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Home subclass different from a living room",
+  "annotation_type": "class_labels_only"
+}

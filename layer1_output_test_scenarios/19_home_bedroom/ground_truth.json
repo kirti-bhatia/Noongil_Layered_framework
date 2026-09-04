@@ -1,0 +1,18 @@
+{
+  "test_id": "19_home_bedroom",
+  "scene": "home",
+  "objects": [
+    "bed",
+    "tv",
+    "chair",
+    "clock"
+  ],
+  "speech": "Please switch off the bedroom light.",
+  "sounds": [
+    "speech"
+  ],
+  "recognized_text": "",
+  "difficulty": "medium",
+  "purpose": "Home subclass and indoor depth",
+  "annotation_type": "class_labels_only"
+}
